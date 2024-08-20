@@ -1,4 +1,5 @@
 Flask
+werkzeug==2.2.2
 Flask-Cors
 Flask-Session
 oauthlib
