@@ -1,10 +1,2 @@
-Flask
-werkzeug==2.2.2
-Flask-Cors
-Flask-Session
-oauthlib
-python-dotenv
-markdown
-
-
-
+Flask==3.0.3
+Werkzeug==3.0.3
