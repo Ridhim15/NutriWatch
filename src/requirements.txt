@@ -1,0 +1,9 @@
+Flask
+Flask-Cors
+Flask-Session
+oauthlib
+python-dotenv
+markdown
+
+
+
