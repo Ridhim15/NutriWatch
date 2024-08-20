@@ -1,3 +1,5 @@
+console.log("service worker is connected")
+
 self.addEventListener("install", event => {
 	event.waitUntil(
 		caches.open("nutriwatch-cache").then(cache => {
@@ -13,3 +15,4 @@ self.addEventListener("fetch", event => {
 		})
 	)
 })
+

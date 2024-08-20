@@ -5,7 +5,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	margin: 0;
-	background-color: #f4f4f4;
+	background-color: #a1f386;
 }
 
 .content {
@@ -15,5 +15,13 @@ body {
 h1 {
 	font-size: 2rem;
 	color: #333;
+}
+@media only screen and (min-width: 768px) {
+	body {
+		background-color: #fc4355;
+	}
+	h1 {
+		font-size: 3rem;
+	}
 }
 

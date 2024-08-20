@@ -1,3 +1,5 @@
+console.log("Connected script")
+
 if ("serviceWorker" in navigator) {
 	navigator.serviceWorker
 		.register("service-worker.js")
@@ -8,3 +10,4 @@ if ("serviceWorker" in navigator) {
 			console.log("Service Worker registration failed:", error)
 		})
 }
+
