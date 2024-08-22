@@ -1,5 +1,4 @@
 from flask import Flask, render_template, redirect, url_for, session, request, jsonify, make_response, send_from_directory
-import google.generativeai as genai
 import os
 
 # Configure Google Generative AI
