@@ -1,9 +1,0 @@
-{
-	"name": "NutriWatch",
-	"short_name": "NutriWatch",
-	"start_url": "./index.html",
-	"display": "standalone",
-	"background_color": "#f4f4f4",
-	"theme_color": "#333333"
-}
-

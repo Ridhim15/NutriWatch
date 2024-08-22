@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NutriWatch</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='./css/style.css') }}">
-    <link rel="manifest" href="../manifest.json">
-    <script src="../service-worker.js" defer></script>
-    <script src="../script.js" defer></script>
+    <link rel="manifest" href="{{{url_for('static',filename='./pwa/manifest.json')}}}">
+    <script src="{{url_for('static',filename='./pwa/service-worker.js')}}" defer></script>
+    <script src="{{url_for('static',filename='./pwa/script.js')}}" defer></script>
 </head>
 
 <body>
-    <div class="content">
-        <h1>HELLO WORLD THIS IS NUTRIWATCH</h1>
-    </div>
-
-
+    <h1>HELLO WORLD THIS IS NUTRIWATCH Upadted with backend </h1>
+    <br>
+    <p>Somehting inside p tag</p>
+    <br>
+    <a href="/login">Login now</a>
+    <br>
+    <!-- <a href="/status">Status</a> -->
 </body>
 
 </html>
