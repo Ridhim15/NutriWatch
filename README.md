@@ -1,3 +1,3 @@
 # NutriWatch
-## A one step solution to ingredants information for everything and everyone 
+## A one step solution to providing information about harmful ingredients in packaged foods
 ### Made in Youth4Future Hackathon
