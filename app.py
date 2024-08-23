@@ -23,7 +23,7 @@ generation_config = {
 
 model = genai.GenerativeModel(
     model_name="gemini-1.5-flash",
-    generation_config=generation_config,  # type: ignore
+    generation_config=generation_config,
 )
 
 app = Flask(__name__)

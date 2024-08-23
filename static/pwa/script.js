@@ -1,4 +1,4 @@
-console.log("Connected scriptdwaljdawlij")
+console.log("Connected script")
 
 if ("serviceWorker" in navigator) {
 	navigator.serviceWorker
