@@ -1,11 +1,9 @@
 body {
 	font-family: Arial, sans-serif;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	height: 100vh;
 	margin: 0;
-	background-color: #a1f386;
+	padding: 0;
+	background-color: #86e8f3;
 }
 
 .content {
@@ -15,6 +13,22 @@ body {
 h1 {
 	font-size: 2rem;
 	color: #333;
+}
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	gap: 2rem;
+}
+.btn {
+	background-color: #e6c0c0;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
 @media only screen and (min-width: 768px) {
 	body {
