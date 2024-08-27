@@ -1,15 +1,16 @@
 import google.generativeai as genai
 import os
 from dotenv import load_dotenv
-from flask import request, jsonify  # Importing request and jsonify from Flask
+from flask import request, jsonify
 
 load_dotenv()
 
 # Configure Google Generative AI
 genai.configure(api_key=os.environ["API_KEY"])
 
+# Uploads the given file to Gemini.
 def upload_to_gemini(path, mime_type=None):
-    """Uploads the given file to Gemini."""
+    
     file = genai.upload_file(path, mime_type=mime_type)
     print(f"Uploaded file '{file.display_name}' as: {file.uri}")
     return file
@@ -33,7 +34,7 @@ def extract_data():
         return jsonify({"error": "No image file provided"}), 400
 
     image = request.files['image']
-    image_path = os.path.join("uploads", image.filename)
+    image_path = os.path.join("./uploads", str(image.filename))
 
     # Ensure the uploads directory exists
     os.makedirs("uploads", exist_ok=True)

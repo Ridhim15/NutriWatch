@@ -1,0 +1,67 @@
+{% extends 'base/template.html' %}
+{% block styles %}
+
+<link rel="stylesheet" href="{{url_for('static',filename='css/form.css')}}">
+{% endblock %}
+
+
+{% block content %}
+<div class="form-container">
+  <h1>Welcome Clara <i class="fa-solid fa-hand-holding-heart"></i> <i class="fa-solid fa-hand-holding-medical"></i></h1>
+  <p>Save your meal preferences to get personalized recipes. Don't worry, you can add them anytime.</p>
+
+  <h2>Do you have allergies?</h2>
+  <div class="allergies">
+    <label><input type="checkbox"><span> Cow's milk</span></label>
+    <label><input type="checkbox"><span> Peanuts</span></label>
+    <label><input type="checkbox"><span> Walnuts</span></label>
+    <label><input type="checkbox"><span> Almonds</span></label>
+    <label><input type="checkbox"><span> Eggs</span></label>
+    <label><input type="checkbox"><span> Wheat</span></label>
+    <label><input type="checkbox"><span> Soy</span></label>
+    <label><input type="checkbox"><span> Fish</span></label>
+    <label><input type="checkbox"><span> Shellfish</span></label>
+    <label><input type="checkbox"><span> Lobsters</span></label>
+    <label><input type="checkbox"><span> Mustard</span></label>
+    <label><input type="checkbox"><span> Sesame</span></label>
+    <label><input type="checkbox"><span> Lactose</span></label>
+    <label><input type="checkbox"><span> Corn</span></label>
+  </div>
+
+  <h2>Calories Range</h2>
+  <div class="calories">
+    <label><input type="radio" name="calories" value="100-400"><span> 100-400</span></label>
+    <label><input type="radio" name="calories" value="400-800"><span> 400-800</span></label>
+    <label><input type="radio" name="calories" value="800-1200"> <span>800-1200</span></label>
+    <label><input type="radio" name="calories" value="1200-1600"> <span>1200-1600</span></label>
+    <label><input type="radio" name="calories" value="1600-2000"><span> 1600-2000</span></label>
+    <label><input type="radio" name="calories" value="2000-2400"><span> 2000-2400</span></label>
+  </div>
+
+  <h2>Cooking experience?</h2>
+  <div class="cooking-experience">
+    <label><input type="radio" name="cooking-experience" value="Beginner"><span> Beginner</span></label>
+    <label><input type="radio" name="cooking-experience" value="Intermediate"> <span>Intermediate</span></label>
+    <label><input type="radio" name="cooking-experience" value="Advanced"><span> Advanced</span></label>
+    <label><input type="radio" name="cooking-experience" value="Pro"><span> Pro</span></label>
+  </div>
+
+  <h2>What kind of meals do you prefer?</h2>
+  <div class="meal-preferences">
+    <label><input type="checkbox"><span> Healthy</span></label>
+    <label><input type="checkbox"><span> Efficient</span></label>
+    <label><input type="checkbox"><span> Nutritious</span></label>
+    <label><input type="checkbox"><span> Variety in meals</span></label>
+    <label><input type="checkbox"><span> Simple meals</span></label>
+    <label><input type="checkbox"><span> Consistency in meals</span></label>
+    <label><input type="checkbox"><span> Complex meals</span></label>
+    <label><input type="checkbox"><span> Flavorful</span></label>
+  </div>
+
+  <button type="submit">Save</button>
+  <button type="reset">Clear all</button>
+</div>
+{% endblock %}
+{% block script %}
+<script src="https://kit.fontawesome.com/1a78a9ce48.js" crossorigin="anonymous"></script>
+{% endblock %}
