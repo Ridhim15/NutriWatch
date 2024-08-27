@@ -1,7 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, session, request, jsonify, make_response, send_from_directory
 import os
 from  dotenv import load_dotenv
-from model import extract_data
 import base64
 
 

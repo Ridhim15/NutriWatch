@@ -7,14 +7,12 @@
 
     <!--=============== REMIXICONS ===============-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
-
-    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="{{url_for('static',filename='base/template-styles.css')}}">
     {% block styles %}{% endblock %}
 
     <title>{% block title %}{% endblock %}</title>
 
-    <!-- PWA Requirements -->
+    <!-- PWA Requirements
     <link rel="manifest" href="{{ url_for('static', filename='pwa/manifest.json') }}">
     <script>
         if ( 'serviceWorker' in navigator ) {
@@ -25,7 +23,7 @@
                     console.log( 'Service Worker registration failed:', error );
                 } );
         }
-    </script>
+    </script> -->
 </head>
 
 <body>
