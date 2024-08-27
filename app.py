@@ -37,10 +37,6 @@ def scanner():
 def chat():
     return render_template('chat.html')
 
-@app.route('/status', methods=['GET'])
-def status():
-    return render_template('status.html')
-
 @app.route('/capture', methods=['POST'])
 def capture():
     # Capture image from base64 data (received from frontend)
@@ -60,7 +56,7 @@ def download_file(filename):
 if __name__ == '__main__':
     if not os.path.exists("uploads"):
         os.makedirs("uploads")
-    app.run(debug=True,host='192.168.29.235')
-    # app.run(debug=True)
+    # app.run(debug=True,host='192.168.29.235')
+    app.run()
 
 
