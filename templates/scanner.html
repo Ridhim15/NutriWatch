@@ -4,6 +4,22 @@
 <link rel="stylesheet" href="{{url_for('static',filename='css/scanner.css')}}">
 {% endblock %}
 {% block content %}
+<div class="header">
+    <div class="nav-header">
+        <div class="left-nav">
+            <a href="/" class="nav__link">
+                <i class="ri-home-smile-2-line"></i>
+            </a>
+        </div>
+        <div class="right-nav">
+            <a href="/dashboard" class="nav__link">
+                <i class="ri-user-line"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
 <div class="scan-container">
     <div class="scanner">
         <video id="video" autoplay>Camera Feed</video>
@@ -23,10 +39,31 @@
             <i class="ri-save-line"></i>
             Save Capture
         </button>
-        <button id="flip-btn">
-            <i class="ri-refresh-line"></i>
-            Flip Camera
+        <button id="flip-btn" class="btn-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-switch-camera">
+                <path d="M11 19H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"></path>
+                <path d="M13 5h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="m18 22-3-3 3-3"></path>
+                <path d="m6 2 3 3-3 3"></path>
+            </svg>
         </button>
+        <button id="identify-btn" class="show-modal btn-dark" style="display: none;">
+            Identify & Redirect
+        </button>
+    </div>
+</div>
+<div class="bottom-sheet">
+    <div class="sheet-overlay"></div>
+    <div class="content">
+        <div class="header">
+            <div class="drag-icon"><span></span></div>
+        </div>
+        <div class="body">
+            <h2>Ingreident Information</h2>
+        </div>
     </div>
 </div>
 {% endblock content %}

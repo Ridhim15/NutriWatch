@@ -1,7 +1,7 @@
 {% extends 'base/template.html' %}
 {% block styles %}
 
-<link rel="stylesheet" href="{{url_for('static',filename='css/form.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/userinfo.css')}}">
 {% endblock %}
 
 
@@ -64,4 +64,5 @@
 {% endblock %}
 {% block script %}
 <script src="https://kit.fontawesome.com/1a78a9ce48.js" crossorigin="anonymous"></script>
+<script src="{{url_for('static',filename='js/userinfo.js')}}"></script>
 {% endblock %}

@@ -11,11 +11,11 @@
                     src="https://img-cdn.pixlr.com/image-generator/history/66c3a6623a293c5d82cad932/52467a1f-f4d6-42ec-88d4-9e562a8bc7d3/preview.webp">
             </div>
             <div class="formBx">
-                <form>
+                <form action="/userinfo" method="POST">
                     <h2>Login</h2>
                     <input type="text" name="" placeholder="Phone Number/Email">
                     <input type="password" name="" placeholder="Password">
-                    <input type="submit" name="" value="Submit">
+                    <input type="submit" value="Submit">
                     <p class="signup"><a href="#" onclick="toggleForm(); return false;">Sign up</a></p>
                 </form>
             </div>
@@ -41,6 +41,17 @@
         </div>
     </div>
 </section>
+<div class="bottom-sheet">
+    <div class="sheet-overlay"></div>
+    <div class="content">
+        <div class="header">
+            <div class="drag-icon"><span></span></div>
+        </div>
+        <div class="body">
+            <h2>Ingreident Information</h2>
+        </div>
+    </div>
+</div>
 
 <script>
     function toggleForm () {
