@@ -19,7 +19,6 @@
     </div>
 </div>
 
-
 <div class="scan-container">
     <div class="scanner">
         <video id="video" autoplay>Camera Feed</video>
@@ -55,6 +54,7 @@
         </button>
     </div>
 </div>
+
 <div class="bottom-sheet">
     <div class="sheet-overlay"></div>
     <div class="content">
@@ -62,11 +62,37 @@
             <div class="drag-icon"><span></span></div>
         </div>
         <div class="body">
-            <h2>Ingreident Information</h2>
+            <h2>Ingredient Information</h2>
+            <br>
+            <div id="allergens" class="model_content_header">
+                <h3>Allergens</h3>
+                <p id="allergens-content"></p>
+            </div>
+            <div id="pet-safe" class="model_content_header">
+                <h3>Is it Pet Safe?</h3>
+                <p id="pet-safe-content"></p>
+            </div>
+            <div id="regulations" class="model_content_header">
+                <h3>Regulations</h3>
+                <p id="regulations-content"></p>
+            </div>
         </div>
     </div>
 </div>
 {% endblock content %}
 {% block scripts %}
 <script src="{{url_for('static',filename='js/scanner.js')}}"></script>
+<script>
+    // Fetch the JSON data from res.json
+    fetch( '/res.json' )
+        .then( response => response.json() )
+        .then( data => {
+            console.log( data );
+            // Populate the HTML with the JSON data
+            document.getElementById( 'allergens-content' ).textContent = data.allergens.join( ', ' );
+            document.getElementById( 'pet-safe-content' ).textContent = data.is_it_pet_safe;
+            document.getElementById( 'regulations-content' ).textContent = data.regulations;
+        } )
+        .catch( error => console.error( 'Error fetching the JSON data:', error ) );
+</script>
 {% endblock %}
