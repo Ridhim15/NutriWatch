@@ -1,18 +1,64 @@
-body {
-	font-family: Arial, sans-serif;
-	height: 100vh;
-	margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap");
+
+:root {
+	/*========== Colors ==========*/
+	--first-color: hsl(225, 95%, 56%);
+	--black-color: hsl(225, 12%, 12%);
+	--white-color: hsl(0, 0%, 100%);
+	--text-color: hsl(225, 8%, 65%);
+	--body-color: hsl(225, 100%, 99%);
+
+	/*========== Font and typography ==========*/
+	--body-font: "Montserrat Alternates", sans-serif;
+	--biggest-font-size: 2.5rem;
+	--tiny-font-size: 0.625rem;
+
+	/*========== Font weight ==========*/
+	--font-regular: 400;
+	--font-semi-bold: 600;
+	--font-bold: 700;
+
+	/*========== z index ==========*/
+	--z-tooltip: 10;
+	--z-fixed: 100;
+}
+
+/*========== Big screen font size ==========*/
+@media screen and (min-width: 1150px) {
+	:root {
+		--biggest-font-size: 3.5rem;
+	}
+}
+
+/*========== Root ==========*/
+* {
+	box-sizing: border-box;
 	padding: 0;
-	background-color: #86e8f3;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--body-font);
+	background: linear-gradient(
+		180deg,
+		rgba(130, 50, 203, 1) 0%,
+		rgba(158, 77, 172, 1) 30%,
+		rgba(205, 115, 126, 1) 60%,
+		rgba(218, 133, 133, 1) 80%,
+		rgba(234, 167, 166, 1) 100%
+	);
+}
+a {
+	text-decoration: none;
+	color: #141414;
 }
 
 .content {
 	text-align: center;
-}
-
-h1 {
-	font-size: 2rem;
-	color: #333;
 }
 .main {
 	display: flex;
@@ -23,17 +69,20 @@ h1 {
 	gap: 2rem;
 }
 .btn {
-	background-color: #e6c0c0;
+	background-color: #6d81ff;
 	color: #fff;
 	padding: 10px 20px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
 }
+.tagline {
+	font-size: 1.2em;
+	color: #000000;
+	margin-bottom: 20px;
+	font-style: italic;
+}
 @media only screen and (min-width: 768px) {
-	body {
-		background-color: #fc4355;
-	}
 	h1 {
 		font-size: 3rem;
 	}

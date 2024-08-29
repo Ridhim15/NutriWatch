@@ -1,9 +1,16 @@
-console.log("service worker is connected")
+const CACHE_NAME = "flask-pwa-cache-v1"
+const urlsToCache = [
+	"/",
+	"/static/pwa/manifest.json",
+	"/static/pwa/service-worker.js",
+	"/static/css/style.css",
+	// Add other files as needed
+]
 
 self.addEventListener("install", event => {
 	event.waitUntil(
-		caches.open("nutriwatch-cache").then(cache => {
-			return cache.addAll(["./", "./index.html", "./style.css", "./script.js", "./manifest.json"])
+		caches.open(CACHE_NAME).then(cache => {
+			return cache.addAll(urlsToCache)
 		})
 	)
 })

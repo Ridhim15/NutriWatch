@@ -1,0 +1,56 @@
+.allergies,
+.calories,
+.cooking-experience,
+.meal-preferences {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+label {
+	margin-bottom: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin-right: 5px;
+}
+label {
+	cursor: pointer;
+}
+label input[type="checkbox"] {
+	display: none;
+}
+label input[type="radio"] {
+	display: none;
+}
+label span {
+	position: relative;
+	display: inline-block;
+	background: #a2929256;
+	padding: 15px 25px;
+	color: #555;
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+	border-radius: 30px;
+	font-size: 20px;
+	transition: 0.5s;
+	user-select: none;
+	overflow: hidden;
+}
+label span:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	width: 50%;
+	background: rgba(255, 255, 255, 0.1);
+}
+label input[type="checkbox"]:checked ~ span {
+	background: #fff;
+	box-shadow: 0 2px 20px #9d42ed;
+}
+label input[type="radio"]:checked ~ span {
+	background: #fff;
+	box-shadow: 0 2px 20px #9d42ed;
+}

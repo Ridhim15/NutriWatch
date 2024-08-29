@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{{url_for('static',filename='base/template-styles.css')}}">
+    {% block styles %}{% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- PWA Requirements -->
+    <link rel="manifest" href="{{ url_for('static', filename='pwa/manifest.json') }}">
+    <script>
+        if ( 'serviceWorker' in navigator ) {
+            navigator.serviceWorker.register( "{{ url_for('static', filename='pwa/service-worker.js') }}" )
+                .then( function ( registration ) {
+                    console.log( 'Service Worker registered with scope:', registration.scope );
+                } ).catch( function ( error ) {
+                    console.log( 'Service Worker registration failed:', error );
+                } );
+        }
+    </script>
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+    <!--=============== NAVBAR ===============-->
+    <nav class="nav">
+        <ul class="nav__list">
+            <li>
+                <a href="/" class="nav__link active-link">
+                    <i class="ri-home-smile-2-line"></i>
+                </a>
+            </li>
+            <li>
+                <a href="/login" class="nav__link">
+                    <i class="ri-user-line"></i>
+                </a>
+            </li>
+
+
+            <!-- Expand list -->
+            <li>
+                <button class="nav__expand" id="nav-expand">
+                    <i class="ri-add-line nav__expand-icon" id="nav-expand-icon"></i>
+                </button>
+
+                <ul class="nav__expand-list" id="nav-expand-list">
+                    <div class="gallery">
+                        <li>
+                            <button id="gallery" class="nav__expand-btn  nav__expand-link">
+                                <i class="ri-image-2-line"></i>
+                                <span>Gallery</span>
+                            </button>
+                        </li>
+                    </div>
+                    <div class="camera">
+                        <li>
+                            <button id="camera" class="nav__expand-btn  nav__expand-link">
+                                <a href="/scanner" class="nav__expand-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-scan">
+                                        <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                                        <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                                        <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                                        <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                                    </svg>
+                                    <span>Scan</span>
+                                </a>
+                            </button>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="#saved" class="nav__link">
+                    <i class="ri-bookmark-3-line"></i>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="/chat" class="nav__link">
+                    <i class="ri-send-plane-line"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--===============MAIN JS===============-->
+    <script src="{{url_for('static',filename='base/template-script.js')}}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>
